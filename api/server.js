@@ -4,12 +4,12 @@ const cors = require('cors');
 
 const app = express();
 
-const uri = "mongodb+srv://peterakinlosotu:PE2003ter@cluster0.jkzdnan.mongodb.net/?retryWrites=true&w=majority"
+const MONGO_URI = "mongodb+srv://peterakinlosotu:PE2003ter@cluster0.jkzdnan.mongodb.net/?retryWrites=true&w=majority"
 
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(uri, {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
